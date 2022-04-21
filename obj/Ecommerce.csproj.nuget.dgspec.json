@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\temp\\Ecommerce\\Ecommerce.csproj": {}
+    "C:\\temp\\Ecommerce\\Ecommerce.csproj": {}
   },
   "projects": {
-    "c:\\temp\\Ecommerce\\Ecommerce.csproj": {
+    "C:\\temp\\Ecommerce\\Ecommerce.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\temp\\Ecommerce\\Ecommerce.csproj",
+        "projectUniqueName": "C:\\temp\\Ecommerce\\Ecommerce.csproj",
         "projectName": "Ecommerce",
-        "projectPath": "c:\\temp\\Ecommerce\\Ecommerce.csproj",
+        "projectPath": "C:\\temp\\Ecommerce\\Ecommerce.csproj",
         "packagesPath": "C:\\Users\\gabri\\.nuget\\packages\\",
-        "outputPath": "c:\\temp\\Ecommerce\\obj\\",
+        "outputPath": "C:\\temp\\Ecommerce\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

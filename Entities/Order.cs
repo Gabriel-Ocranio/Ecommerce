@@ -1,8 +1,8 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using System.Text;
 using Ecommerce.Entities.Enums;
+using System.Globalization;
 
 namespace Ecommerce.Entities
 {
@@ -32,10 +32,24 @@ namespace Ecommerce.Entities
             double sum = 0;
             foreach(OrderItem item in OrderItems)
             {
-                sum = item.SubTotal();
+                sum += item.SubTotal();
             }
 
             return sum;
+        }
+        public override string ToString()
+        {
+            StringBuilder sb  = new StringBuilder();
+            sb.AppendLine("Order moment: " + Moment.ToString("dd/MM/yyyy HH:mm:ss"));
+            sb.AppendLine("Order status: " + Status);
+            sb.AppendLine("Client: " + Client);
+            sb.AppendLine("Order Items: ");
+            foreach(OrderItem item in OrderItems)
+            {
+                sb.AppendLine(item.ToString());
+            }
+            sb.AppendLine("Total price: R$ " + Total().ToString("f2", CultureInfo.InvariantCulture));
+            return sb.ToString();
         }
     }
 }

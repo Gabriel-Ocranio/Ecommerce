@@ -1,7 +1,4 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using System.Globalization;
 
 namespace Ecommerce.Entities
 {
@@ -9,17 +6,22 @@ namespace Ecommerce.Entities
     {
         public int Quantity { get; set; }
         public double Price { get; set; }
-        public Produtc Produtc { get; set; }
+        public Product Product { get; set; }
         public OrderItem(){}
-        public OrderItem(int quantity, double price, Produtc produtc)
+        public OrderItem(int quantity, double price, Product product)
         {
             Quantity = quantity;
             Price = price;
-            Produtc = produtc;
+            Product = product;
         }
         public double SubTotal()
         {
             return Quantity * Price;
+        }
+        public override string ToString()
+        {
+            return Product.Name + ", R$ " + Price + ", " + "Quantity: " + Quantity +
+            ", " + "Subtotal: R$ " + SubTotal().ToString("F2", CultureInfo.InvariantCulture);
         }
     }
 }
